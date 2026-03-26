@@ -22,7 +22,6 @@ export enum Rank {
 }
 
 const rank_values: Record<Rank, number> = {
-    [Rank.Ace]: 1,
     [Rank.Two]: 2,
     [Rank.Three]: 3,
     [Rank.Four]: 4,
@@ -35,6 +34,7 @@ const rank_values: Record<Rank, number> = {
     [Rank.Jack]: 11,
     [Rank.Queen]: 12,
     [Rank.King]: 13,
+    [Rank.Ace]: 14,
 };
 
 export class Card {
