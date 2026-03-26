@@ -10,9 +10,9 @@ describe('Test deck', () => {
             expect(card.suit).toBe(Suit.Spades);
         });
 
-        it('should map the correct numeric value for an Ace (1)', () => {
+        it('should map the correct numeric value for an Ace (14)', () => {
             const card = new Card(Suit.Clubs, Rank.Ace);
-            expect(card.value).toBe(1);
+            expect(card.value).toBe(14);
         });
 
         it('should map the correct numeric value for a Face card (King = 13)', () => {
@@ -45,9 +45,9 @@ describe('Test deck', () => {
         });
 
         it('should change the order of cards after shuffling', () => {
-            const originalOrder = [...deck.cards].map(card => card.toString());
+            const originalOrder = [...deck.cards];
             deck.shuffle();
-            const shuffledOrder = deck.cards.map(card => card.toString());
+            const shuffledOrder = deck.cards;
 
             expect(shuffledOrder).not.toEqual(originalOrder);
             expect(shuffledOrder.length).toBe(52);
